@@ -1,0 +1,169 @@
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth; /* Scroll fluide */
+    overflow: auto; /* Active le défilement */
+    overflow-x: hidden;
+    background-color: #000000;
+}
+body {
+    margin: 0%;
+    padding: 0%;
+    scroll-snap-type: y mandatory; /* Snap vertical obligatoire */
+}
+.section {
+    height: 100vh; /* Chaque section occupe la hauteur complète de l'écran */
+    scroll-snap-align: start; /* Chaque section commence en haut de l'écran */
+    font-size: 2rem;
+}
+.section:nth-child(1) {
+    background-color: #c2ff00; /* Rouge tomate */
+}
+.section:nth-child(2) {
+    background-color: #000000; /* Bleu acier */
+    color: #ffffff;
+}
+.section:nth-child(3) {
+    background-color: #c2ff00; /* Vert lime */
+}
+.section:nth-child(4) {
+    background-color: #000000; /* Vert lime */
+    color: #ffffff;
+}
+.section a {
+    text-decoration: none;
+    color: #000000;
+}
+.tete {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15%;
+    padding: 1%;
+}
+#logo {
+    height: 5%;
+    width:5%;
+    position: relative;
+    margin: 0%;
+}
+#txt1 {
+    text-align: center;
+    padding: 3%;
+}
+#txt2 {
+    text-align: center;
+    position: relative;
+    top: -9%;
+}
+#bame {
+    top: -9%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    width: 30%;
+    animation: alternate-radius 5s infinite;
+}
+@keyframes alternate-radius {
+    0% {
+        border-radius: 2.5%; /* Arrondi */
+    }10% {
+        border-radius: 5%; /* Arrondi */
+    }20% {
+        border-radius: 10%; /* Arrondi */
+    }30% {
+        border-radius: 15%; /* Arrondi */
+    }40% {
+        border-radius: 20%; /* Arrondi */
+    }50% {
+        border-radius: 25%; /* Arrondi */
+    }60% {
+        border-radius: 30%; /* Arrondi */
+    }70% {
+        border-radius: 35%; /* Arrondi */
+    }
+    80% {
+        border-radius: 40%; /* Coins carrés */
+    }
+    90% {
+        border-radius: 45%; /* Arrondi */
+    }100% {
+        border-radius: 50%; /* Arrondi */
+    }
+
+}
+#sec2 {
+    padding: 1%;
+    position: relative;
+    left: 5%;
+    color: #ffffff;
+    font-size: 80pt;
+}
+#bs {
+    text-align: center;
+}
+.ap {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+.ap1,.ap2,.ap3 {
+    font-size: 32pt;
+    height: 60vh;
+    border: #000000 solid 1px;
+    background-color: #ffffff;
+    color: #000000;
+    width: 30%;
+    border-radius: 15px;
+}
+#b {
+    text-align: center;
+    position: relative;
+    top: 4%;
+}
+.sec3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.ep {
+    width: 50%;
+    background-color: #c2ff00;
+    height: 100vh;
+}
+.etud {
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+}
+#sec3d{
+    color: #c2ff00;
+    margin: 5%;
+    padding: -10%;
+}
+#sec3 {
+    margin: 5%;
+    padding: -10%;
+}
+#sec4 {
+    color: #c2ff00;
+    margin: 5%;
+    padding: 2%;
+}
+/*Texte du contact*/
+.card {
+    width: 50%;
+    height: 40vh;
+    aspect-ratio: 1 / 0.7;
+    border-radius: 8px;
+    position: relative;
+    left: 50%;
+    translate: -50% -20%;
+    background-color: #c2ff00;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.cont {
+    text-align: center;
+    color: #000000;
+}
