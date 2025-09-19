@@ -1,39 +1,54 @@
-body, * {
-    padding: 0%;
-    margin: 0%;
+* {
+    padding: 0;
+    margin: 0;
     overflow-x: hidden;
 }
 
 body {
-        height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 /* Base nav styles */
-.nav-list {
+
+header {
     display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement si tu veux aussi */
+    height: 80px;   
+    background-color: #ffffff; /* optionnel */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
     list-style: none;
-    gap: 1rem;
-    justify-content: center;
-    padding: 1rem;
-    background-color: #222;
+    display: flex;
+    gap: 75px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 1000px;
+    background-color: #e2dfdf;
 }
 
 .nav-list li a {
-    color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    color: #333;
 }
 
-.nav-list a {
-    font-family: "Alfa Slab One", serif;
-    font-style: normal;
-    font-size: 1em;
-
-}
-
-.nav-list li a:hover {
-    background-color: #444;
-    border-radius: 5px;
+/* Pour le bouton menu burger sur mobile */
+.menu-toggle {
+    display: none; /* visible uniquement sur mobile avec media queries */
 }
 
 /* Hamburger menu styles */
@@ -45,28 +60,6 @@ body {
     cursor: pointer;
 }
 
-/*** Page Acceuil ***/
-
-.acceuil {
-    display: flex;
-    height: 100vh;
-    background: #ffffff; 
-   
-}
-
-.logo {
-    width: 700px;
-    height: 700px;
-    margin: auto 0;
-    z-index: 2;
-}
-
-#logo {
-    width: 40%;
-    height: 40%;
-    border-radius: 50%;
-    margin: auto 0;
-}
 
 
 ul{
@@ -86,36 +79,49 @@ li {
     color: red;
 }
 
-#nom {
-    position: relative;
-    top: 40%;
-    left: 15%;
-    transform: translate(35% 35%);
-    width: 50%;
+
+
+
+/* Footer stylé */
+
+main {
+    flex: 1; /* Permet au footer de rester en bas */
 }
 
-#nom p {
-font-family: "Roboto", sans-serif;
-  font-size: 1.5em;
-  font-style: normal;
-  font-variation-settings:
+/* 2. Footer */
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
 }
 
-#nom h2 {
-font-family: "Alfa Slab One", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3em;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#nom a {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.5em;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
+.footer-links {
+    margin-top: 10px;
 }
 
+.footer-links a {
+    color: #bbb;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/*** Page Acceuil ***/
+.acceuil {
+    overflow: hidden;
+    z-index: 2;
+}
 /*** Page Profil ***/
 
 .presentation {
@@ -150,13 +156,30 @@ font-family: "Alfa Slab One", serif;
     border-radius: 100px;
 }
 
-#cv {
+.rubriques {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10%;
+    left: 40%;
+    transform: translate(0% 0%);
+}
+.rubriques-1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10px;
+    left: 40%;
+    transform: translate(0% 0%);
+}
+
+#cv{
     display: flex;
     gap: 5%;
     position: relative;
-    top: 25%;
+    top: 10px;
     left: 40%;
-    transform: translate(50% 50%);
+    transform: translate(0% 0%);
 }
 
 /*** Page bts ***/
